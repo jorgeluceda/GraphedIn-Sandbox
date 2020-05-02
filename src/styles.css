@@ -1,4 +1,213 @@
 .App {
+  max-height: 100vh;
+  display: flex;
+  flex-direction: column;
   font-family: sans-serif;
+  font-size: 16px;
   text-align: center;
+}
+
+.searchBar {
+  z-index: 1;
+  height: 2.5em;
+  background-color: #4f91b4;
+  color: white;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0px 2px 7px #888888;
+}
+
+.line {
+  stroke: gray;
+}
+.ellipse {
+  fill: lightblue;
+}
+.circle {
+  fill: lightgreen;
+}
+
+.profileGraph {
+  z-index: 0;
+  height: 11em;
+  background-color: #dde4e9;
+}
+
+.link {
+  position: absolute;
+  border-bottom: 3px solid #2b5181 !important;
+  /* background-color: black; */
+}
+
+.leftToMiddle {
+  margin-top: 3em;
+  margin-left: 15%;
+  width: 35%;
+  transform: rotate(-10deg);
+}
+
+.leftToRight {
+  margin-top: 5.85em;
+  margin-left: 17.5%;
+  width: 65%;
+  /* transform: rotate(); */
+}
+
+.leftToMain {
+  margin-top: 8.5em;
+  margin-left: 17.5%;
+  width: 35%;
+  transform: rotate(20deg);
+}
+
+.middleToRight {
+  margin-top: 3em;
+  margin-left: 50%;
+  width: 32.5%;
+  transform: rotate(10deg);
+}
+
+.rightToMain {
+  margin-top: 8.5em;
+  margin-left: 46.5%;
+  width: 35%;
+  transform: rotate(-20deg);
+}
+
+.middleToMain {
+  margin-top: 7em;
+  margin-left: 45%;
+  width: 10%;
+  transform: rotate(90deg);
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+}
+
+.profileSummary {
+  display: flex;
+  flex-direction: column;
+  margin-top: 7em;
+  z-index: 3;
+  background-color: white;
+}
+
+.summaryName {
+  width: 100%;
+  padding: 0em;
+  margin: 0em;
+  text-align: center;
+  font-size: 2em;
+  font-weight: 600;
+}
+
+.summaryCompany {
+  color: #606060;
+  font-weight: 600;
+}
+
+.smallPicture {
+  z-index: 1;
+  background: white;
+  border-radius: 80%;
+  margin-left: -3em;
+  height: 6em;
+  width: 6em;
+  border-style: solid;
+  border-width: 0px;
+  box-shadow: 0px 0px 4px #888888;
+  border-color: #707070;
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+}
+
+.spLeft {
+  left: 18.5%;
+  top: 5.5em;
+}
+
+.spMiddle {
+  left: 50%;
+  top: 3.75em;
+}
+
+.spRight {
+  left: 82.5%;
+  top: 5.5em;
+}
+
+.bigPicture {
+  z-index: 1;
+  background: white;
+  border-radius: 80%;
+  left: 50%;
+  margin-left: -5em;
+  top: 10.5em;
+  height: 10em;
+  width: 10em;
+  border-style: solid;
+  border-width: 0px;
+  box-shadow: 0px 0px 4px #888888;
+  border-color: #707070;
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+}
+
+.embeddedPicture {
+  display: flex;
+  border-radius: 50%;
+}
+
+.epSmall {
+  height: 5.75em;
+  width: 5.75em;
+  background-color: #c8ebee;
+}
+
+.epLarge {
+  height: 9.5em;
+  width: 9.5em;
+  background-color: #e65800;
+}
+
+.profileExtraInfo {
+  z-index: -1;
+  background-color: #606060;
+  color: #606060;
+  align-self: center;
+  padding-left: 1em;
+  margin-right: 1em;
+  margin-top: 1em;
+  border-radius: 20px;
+  width: 80%;
+}
+
+.options {
+  z-index: 1;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  box-shadow: 0px -1px 10px #888888;
+  height: 3em;
+  width: 100%;
+}
+
+.optionsText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
 }
