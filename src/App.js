@@ -1,11 +1,29 @@
 import React, { useState } from "react";
 import "./styles.css";
 
+
+// connections pictures
 import conn_l from "../public/connection-left.jpg";
 import conn_m from "../public/connection-middle.jpg";
 import conn_r from "../public/connection-right.jpg";
 
+
+// options icons (unfulled)
+import { ReactComponent as HomeUnfilled } from "../public/options-icons-unfilled/home.svg";
+import { ReactComponent as NetworkUnfilled } from "../public/options-icons-unfilled/network.svg";
+import { ReactComponent as PostUnfilled } from "../public/options-icons-unfilled/post.svg";
+import { ReactComponent as NotifsUnfilled } from "../public/options-icons-unfilled/notifs.svg";
+import { ReactComponent as JobsUnfilled } from "../public/options-icons-unfilled/jobs.svg";
+
+// options icons (filled)
+import { ReactComponent as HomeFilled } from "../public/options-icons-filled/home.svg";
+import { ReactComponent as NetworkFilled } from "../public/options-icons-filled/network.svg";
+import { ReactComponent as PostFilled } from "../public/options-icons-filled/post.svg";
+import { ReactComponent as NotifsFilled } from "../public/options-icons-filled/notifs.svg";
+import { ReactComponent as JobsFilled } from "../public/options-icons-filled/jobs.svg";
+
 export default function App() {
+  const [currentOption, setCurrentOption] = useState("network");
   const [profile, setProfile] = useState({
     name: "Tim Cook",
     company: "CEO of Apple Inc.",
@@ -52,18 +70,11 @@ export default function App() {
           </div>
 
           {shownLinks}
-          {/* <div className="link leftToMiddle">&nbsp;</div>
-          <div className="link leftToMain">&nbsp;</div>
-          <div className="link leftToRight">&nbsp;</div>
-          <div className="link middleToRight">&nbsp;</div>
-          <div className="link rightToMain">&nbsp;</div> */}
         </div>
 
         <div className="profileSummary">
           <div className="summaryName">{profile.name}</div>
           <div className="summaryCompany">{profile.company}</div>
-
-          {/* <span className="summary-degree">{profile.degree}</span> */}
         </div>
         <div className="bigPicture">
           <div className="embeddedPicture epLarge" />
@@ -74,9 +85,72 @@ export default function App() {
         <div className="profileExtraInfo">Extra Info goes here</div>
       </div>
       <div className="options">
-        <div className="optionsText">
-          Note: all images are royalty-free stock images
-        </div>
+        <button>
+          {currentOption === "home" ? (
+            <>
+              <HomeFilled className="optionsIcon" />
+              <div className="optionsTextFilled">Home</div>
+            </>
+          ) : (
+            <>
+              <HomeUnfilled className="optionsIcon" />
+              <div>Home</div>
+            </>
+          )}
+        </button>
+        <button>
+          {currentOption === "network" ? (
+            <>
+              <NetworkFilled className="optionsIcon" />
+              <div className="optionsTextFilled">My Network</div>
+            </>
+          ) : (
+            <>
+              <NetworkUnfilled className="optionsIcon" />
+              <div>My Network</div>
+            </>
+          )}
+        </button>
+
+        <button>
+          {currentOption === "post" ? (
+            <>
+              <PostFilled className="optionsIcon" />
+              <div className="optionsTextFilled">Post</div>
+            </>
+          ) : (
+            <>
+              <PostUnfilled className="optionsIcon" />
+              <div>Post</div>
+            </>
+          )}
+        </button>
+        <button>
+          {currentOption === "notifications" ? (
+            <>
+              <NotifsFilled className="optionsIcon" />
+              <div className="optionsTextFilled">Notifications</div>
+            </>
+          ) : (
+            <>
+              <NotifsUnfilled className="optionsIcon" />
+              <div>Notifications</div>
+            </>
+          )}
+        </button>
+        <button>
+          {currentOption === "jobs" ? (
+            <>
+              <JobsFilled className="optionsIcon" />
+              <div className="optionsTextFilled">Jobs</div>
+            </>
+          ) : (
+            <>
+              <JobsUnfilled className="optionsIcon" />
+              <div>Jobs</div>
+            </>
+          )}
+        </button>
       </div>
     </div>
   );

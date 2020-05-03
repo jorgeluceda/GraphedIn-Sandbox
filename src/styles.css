@@ -205,9 +205,21 @@
   width: 100%;
 }
 
-.optionsText {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.options > button {
   background-color: white;
+  outline: none;
+  border: 0;
+  padding: 0;
+  width: 20%;
+  font-family: sans-serif;
+  /* font-size: 13.333px; */
+}
+
+.options > button > .optionsIcon {
+  height: 1.65em;
+}
+
+.options > button > .optionsTextFilled {
+  color: #4f91b4;
+  font-weight: 600;
 }
