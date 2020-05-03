@@ -34,7 +34,6 @@ export default function App() {
     leftToMiddle: true,
     middleToRight: true,
     rightToMain: true,
-    leftToMain: true
   });
 
   let linkKeys = Object.keys(nodeLinks);
