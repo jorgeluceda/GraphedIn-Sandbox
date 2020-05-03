@@ -3,24 +3,24 @@ import "./styles.css";
 
 
 // connections pictures
-import conn_l from "../public/connection-left.jpg";
-import conn_m from "../public/connection-middle.jpg";
-import conn_r from "../public/connection-right.jpg";
+import conn_l from "./img/connection-left.jpg";
+import conn_m from "./img/connection-middle.jpg";
+import conn_r from "./img/connection-right.jpg";
 
 
 // options icons (unfulled)
-import { ReactComponent as HomeUnfilled } from "../public/options-icons-unfilled/home.svg";
-import { ReactComponent as NetworkUnfilled } from "../public/options-icons-unfilled/network.svg";
-import { ReactComponent as PostUnfilled } from "../public/options-icons-unfilled/post.svg";
-import { ReactComponent as NotifsUnfilled } from "../public/options-icons-unfilled/notifs.svg";
-import { ReactComponent as JobsUnfilled } from "../public/options-icons-unfilled/jobs.svg";
+import { ReactComponent as HomeUnfilled } from "./img/options-icons-unfilled/home.svg";
+import { ReactComponent as NetworkUnfilled } from "./img/options-icons-unfilled/network.svg";
+import { ReactComponent as PostUnfilled } from "./img/options-icons-unfilled/post.svg";
+import { ReactComponent as NotifsUnfilled } from "./img/options-icons-unfilled/notifs.svg";
+import { ReactComponent as JobsUnfilled } from "./img/options-icons-unfilled/jobs.svg";
 
 // options icons (filled)
-import { ReactComponent as HomeFilled } from "../public/options-icons-filled/home.svg";
-import { ReactComponent as NetworkFilled } from "../public/options-icons-filled/network.svg";
-import { ReactComponent as PostFilled } from "../public/options-icons-filled/post.svg";
-import { ReactComponent as NotifsFilled } from "../public/options-icons-filled/notifs.svg";
-import { ReactComponent as JobsFilled } from "../public/options-icons-filled/jobs.svg";
+import { ReactComponent as HomeFilled } from "./img/options-icons-filled/home.svg";
+import { ReactComponent as NetworkFilled } from "./img/options-icons-filled/network.svg";
+import { ReactComponent as PostFilled } from "./img/options-icons-filled/post.svg";
+import { ReactComponent as NotifsFilled } from "./img/options-icons-filled/notifs.svg";
+import { ReactComponent as JobsFilled } from "./img/options-icons-filled/jobs.svg";
 
 export default function App() {
   const [currentOption, setCurrentOption] = useState("network");
@@ -33,7 +33,8 @@ export default function App() {
   const [nodeLinks, setNodeLinks] = useState({
     leftToMiddle: true,
     middleToRight: true,
-    rightToMain: true
+    rightToMain: true,
+    leftToMain: true
   });
 
   let linkKeys = Object.keys(nodeLinks);

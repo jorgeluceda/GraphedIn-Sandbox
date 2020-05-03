@@ -223,3 +223,48 @@
   color: #4f91b4;
   font-weight: 600;
 }
+
+@media screen and (min-width: 1020px) {
+  .leftToMiddle {
+    margin-top: 3em;
+    margin-left: 20%;
+    width: 30%;
+    transform: rotate(-5deg);
+  }
+
+  .leftToRight {
+    margin-top: 5.85em;
+    margin-left: 17.5%;
+    width: 65%;
+    /* transform: rotate(); */
+  }
+
+  .leftToMain {
+    margin-top: 8.5em;
+    margin-left: 17.5%;
+    width: 35%;
+    transform: rotate(9deg);
+  }
+
+  .middleToRight {
+    margin-top: 3em;
+    margin-left: 50%;
+    width: 30%;
+    transform: rotate(5deg);
+  }
+
+  .rightToMain {
+    margin-top: 8.5em;
+    margin-left: 46.5%;
+    width: 35%;
+    transform: rotate(-9deg);
+  }
+
+  .middleToMain {
+    margin-top: 7em;
+    margin-left: 45%;
+    width: 10%;
+    transform: rotate(90deg);
+  }
+
+}
